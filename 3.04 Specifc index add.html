@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8" />
+<title>Javascript add and display 10 members of an array</title>
+
+</head>
+<body>
+<h1>Javascript</h1>
+<h2>Add array at the specific index</h2>
+<input id="element" />
+<input id="index" />
+<!--  add element to end of array -->
+<input type="button" value="Push member to array" onclick="addtoarray(element.value, index.value)" />
+<p id="myarray"></p>
+<br>
+<p id="myarray2"></p>
+
+<script>
+	 var array = [];
+	 function addtoarray(arr=[], index){
+		 array.splice(index, 0, arr);
+		 document.getElementById("myarray").innerHTML = arr;
+		 document.getElementById("myarray2").innerHTML = array;
+	 }
+
+
+
+</script>
+
+
+</body>
+</html>
