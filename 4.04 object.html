@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p>Object</p>
+<p id="demo"></p>
+
+<script>
+var car = {
+		make: 'Audi',
+		color: 'blue',
+		fuel: 'diesel',
+		showMake: function(){
+			return this.make;
+		}
+	}
+
+	document.getElementById("demo").innerHTML = car.showMake();
+
+
+</script>
+</body>
+</html>
+

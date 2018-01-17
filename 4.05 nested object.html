@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo"></p>
+<p id="demo2"></p>
+
+
+<script>
+
+	var person = {
+		firstname: 'Rob',
+		lastname: 'Green',
+		fullname: function(){
+			return this.firstname + " " + this.lastname;
+		},
+
+		address: { //object within the object
+			street: '150 Minories',
+			city: 'London',
+			floor: '4'
+		}
+	}
+
+	document.getElementById("demo").innerHTML = person.address.street + '<br>' + person.address.city + '<br>' + person.address.floor;
+
+</script>
+
+</body>
+</html>

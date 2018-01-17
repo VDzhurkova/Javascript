@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo"></p>
+<p id="demo2"></p>
+
+
+<script>
+function car(make, color, fuel){
+		this.carMake = make;
+		this.carColor = color;
+		this.carFuel = fuel;
+
+}
+
+	var myFirstCar = new car('Honda', 'red', 'diesel');
+	var mySecondCar = new car('Audi', 'blue', 'hibrid');
+
+	document.getElementById("demo").innerHTML = myFirstCar.carMake  + " " + myFirstCar.carColor + " " + myFirstCar.carFuel;
+	document.getElementById("demo2").innerHTML = mySecondCar.carMake  + " " + mySecondCar.carColor + " " + mySecondCar.carFuel;
+	</script>
+
+
+</body>
+</html>
