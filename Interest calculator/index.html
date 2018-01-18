@@ -1,0 +1,126 @@
+
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8" />
+<title>Interest only Calculator</title>
+
+
+
+ <!--<link rel="stylesheet" type="text/css" href="main.css">-->
+
+</head>
+<body>
+
+<div id="wrapper">
+
+<div id="outercontainer">
+
+
+
+
+ <div class="row">
+		 <div class="col-md-2"></div>
+				<div class="col-md-8"><h1>Interest only calculator</h1></div>
+				<div class="col-md-2"></div>
+	 </div>
+
+ <div class="row">
+		 <div class="col-md-2"></div>
+				<div class="col-md-8"><h2>Calculate the interest to pay on a loan</h2>	</div>
+				<div class="col-md-2"></div>
+	 </div>
+
+
+	<div class="row thebox">
+		 <div class="col-md-12">
+
+	<div class="row"><div class="col-md-4 mob"></div>
+	<div class="col-md-4"><div id="label1">Loan amount</div><div id="labe1r"><input id="input1" type="number" required></div></div>
+	<div class="col-md-4 mob"></div>
+	</div>
+
+<div class="row">
+		<div class="col-md-4 mob"></div>
+		<div class="col-md-4">
+	<div id="label2">Interest rate</div><div id="labe1r"><input id="input2" type="number" required></div></div>
+	<div class="col-md-4 mob"></div>
+</div>
+
+<div class="row">
+		<div class="col-md-4 mob"></div>
+		<div class="col-md-4"><div id="label3">Term</div><div id="labe1r"><input id="input3" type="number" required></div></div>
+		<div class="col-md-4 mob"></div>
+</div>
+
+<div class="row"><div class="col-md-4"></div>
+<div class="col-md-4"><br></div>
+<div class="col-md-4"></div>
+</div>
+
+<div class="row">
+<div class="col-md-4"></div>
+<div class="col-md-4"><input type="button" id="calcinterestbtn" value="Calculate Interest" onclick="calculateInterest(input1.value,input2.value,input3.value)"/></div>
+<div class="col-md-4"></form></div>
+</div>
+
+ </div>
+
+	 </div>
+
+<div class="row">
+<div class="col-md-4"></div>
+<div class="col-md-4"><br></div>
+<div class="col-md-4"></div>
+</div>
+
+
+<div class="row">
+<div class="col-md-4"></div>
+<div class="col-md-4"><span id="monthlypaymentheader"></span></div>
+<div class="col-md-4"></div>
+</div>
+
+<div class="row">
+<div class="col-md-4"></div>
+<div class="col-md-4"><span id="monthlypaymentresult"></span></div>
+<div class="col-md-4"></div>
+</div>
+
+<div class="row">
+<div class="col-md-4"></div>
+<div class="col-md-4"><span id="moneyimage"></span></div>
+<div class="col-md-4"></div>
+</div>
+
+<div class="row">
+<div class="col-md-4"></div>
+<div class="col-md-4"><span id="totalinterestpaymentresult"></span></div>
+<div class="col-md-4"></div>
+</div>
+
+
+ </div>
+
+</div>
+
+
+
+
+
+</div>
+</div>
+
+
+
+
+
+
+				<hr>
+
+
+
+
+<script src="loan.js"></script>
+</body>
+</html>
