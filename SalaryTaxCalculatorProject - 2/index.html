@@ -17,38 +17,38 @@ Personal allowance: £11,000
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="../bootstrap.css">
-		<link rel="stylesheet" href="style.css">
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-		<script src="bootstrap.js"></script>
+		<link href='https://fonts.googleapis.com/css?family=Kalam' rel='stylesheet'>
+		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="styles.css">
 		<!--<link rel="stylesheet" href="style.css">-->
 
 	</head>
 
-	<body>
+	<body class="backgroundImg">
 				<div class = "container">
 						<div class="row well">
 							<div class="text-center">
 								<h2 class="text-danger ">Salary Tax Calculator</h2>
-								<br/>
 								<h3 class="text-primary">Please enter your gross salary to find out how much tax you will pay (national insurance not calculated)</h3>
 								<br/>
 								<br/>
-								<div>
+								<div class="input-field">
 										<!--Text box for user input-->
 										<span class="text-lg labels">Please enter your gross salary:</span>
 										<input type="number input-lg" id="tbGrossSalary">
 										<br/>
 										<br/>
 										<!--Submit button -->
-										<button id="buttonCalculate" class="btn-lg btn-primary" onclick="calculate(tbGrossSalary.value)">Calculate Tax</button>
+										<button id="buttonCalculate" class="btn-lg btn-primary" onclick="calculate(tbGrossSalary.value)">Calculate Tax&nbsp;&nbsp;<i class="fa fa-calculator" aria-hidden="true"></i></button>
 								</div>
 							</div>
-						<div>
+						<div class="output-field">
 								<br/>
 								<br/>
+                            
 						<!--Output from tax calculations-->
-								<div class="row">
+								<div class="row-flex">
 										<div class="col-sm-2 col-sm-offset-4">
 												<p class="labels">Gross salary: </p>
 										</div>
@@ -57,7 +57,7 @@ Personal allowance: £11,000
 										</div>
 								</div>
 								<!-- end row -->
-								<div class="row">
+								<div class="row-flex">
 										<div class="col-sm-2 col-sm-offset-4">
 												<p class="labels">Tax free allowance:</p>
 										</div>
@@ -66,7 +66,7 @@ Personal allowance: £11,000
 										</div>
 								</div>
 								<!-- end row -->
-								<div class="row">
+								<div class="row-flex">
 										<div class="col-sm-2 col-sm-offset-4">
 											 <p class="labels">Tax paid at 20%:</p>
 										</div>
@@ -75,7 +75,7 @@ Personal allowance: £11,000
 										</div>
 								</div>
 								<!-- end row -->
-								<div class="row">
+								<div class="row-flex">
 										<div class="col-sm-2 col-sm-offset-4">
 												<p class="labels">Tax paid at 40%:</p>
 										</div>
@@ -84,7 +84,7 @@ Personal allowance: £11,000
 										</div>
 								</div>
 								<!-- end row -->
-								<div class="row">
+								<div class="row-flex">
 										<div class="col-sm-2 col-sm-offset-4">
 												<p class="labels">Net salary: </p>
 										</div>
@@ -97,8 +97,9 @@ Personal allowance: £11,000
 						</div>
 				</div>
 			 </div>
+		 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 		<script src="salaryTaxCalculator.js"></script>
-
 	</body>
 
 </html>

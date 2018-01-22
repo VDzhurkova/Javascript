@@ -1,13 +1,3 @@
-/*function country(name, capital, location, population){
-		this.nameC = name;
-		this.capitalC = capital;
-		this.locationC = location;
-		this.populationC = population;
-
-}
-
-var firstCountry = new country("Bulgaria","Sofia","Europa","9.000.000");
-var secondCountry = new country("Germany","Berlin","Europa","82.800.000");*/
 
 var array = [
 
@@ -92,9 +82,15 @@ for(var i = 0 ; i<3; i++){
 		 false_count++;
 	}
 }
-
-	//console.log(anw);
-	document.getElementById("result").innerHTML = "You have answered right " +right_count+ " times. Your right answer is on question " + anw;
+    if(anw.length == 0) {
+        document.getElementById("result").innerHTML = "No right answers" ;
+    }
+	else if(anw.length == 1){
+	document.getElementById("result").innerHTML = "You have answered right only question N " +anw;
+    }
+    else {
+    document.getElementById("result").innerHTML = "You have answered right " +right_count+ ". Your right answer is on questions " + anw;
+    }
 }
 
 //console.log(array);

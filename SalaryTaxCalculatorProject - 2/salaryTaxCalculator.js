@@ -23,8 +23,7 @@ function calculate(salary){
 
 	}
 	else {
-
-		tax_free = salary;
+        
 		net = salary;
 	}
 
@@ -34,6 +33,7 @@ function calculate(salary){
 document.getElementById("grossSalaryOutput").innerHTML = salary;
 
 document.getElementById("taxFreeOutput").innerHTML = tax_free;
+    console.log(tax_free);
 document.getElementById("taxedAtBasicRateOutput").innerHTML = tax20;
 document.getElementById("taxedAtHigherRateOutput").innerHTML = tax40;
 document.getElementById("netSalaryOutput").innerHTML = net;

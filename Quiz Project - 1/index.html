@@ -7,35 +7,58 @@
 	<head>
 	<!-- <meta charset="UTF-8"> prevents display errors with special characters such as £ -->
 	<meta charset="UTF-8">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="style.css">
 
 	</head>
 
 	<body>
-		<div>
+        <header class="quiz">.</header>
+		<div class="container">
+            <div class="text-center">
 			<h2>Quiz (Javascript objects exercise)</h2>
+            <br/>
+            </div>
+            
+            
+            <div class="row"> 
+                <img src="img/questions.png"> 
+            </div>
+            <div class="row">
 			<p id = "q1"></p>
 			<ul id= "q1AnswerList"></ul>
 			<span>Please choose an answer:</span>
 			<input type = "number" id="q1Answer" min="1" max ="4"/>
 			<br/>
+            </div>
+            <div class="row">
 			<p id = "q2"></p>
 			<ul id= "q2AnswerList"></ul>
 			<span>Please choose an answer:</span>
 			<input type = "number" id="q2Answer" min="1" max ="4"/>
 			<br/>
+            </div>
+            <div class="row">
 			<p id = "q3"></p>
 			<ul id= "q3AnswerList"></ul>
 			<span>Please choose an answer:</span>
 			<input type = "number" id="q3Answer" min="1" max ="4"/>
 			<br/>
 			<br/>
-			<button type="button" id="finishQuiz" onclick="getAnswer(q1Answer.value,q2Answer.value,q3Answer.value)">Submit Quiz</button>
+            </div>
+           
+			<button class="btn-lg btn-primary" type="button" id="finishQuiz" onclick="getAnswer(q1Answer.value,q2Answer.value,q3Answer.value)">Submit Quiz</button>
 			<br/>
 			<br/>
+            <div class="output-field">
 			<span id = "result"></span>
-		</div>
-	<script src="quiz.js"></script>
+            </div>
+        </div>
+       
+        <footer class="quiz">.</footer>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	    <script src="quiz.js"></script>
+        
 	</body>
 
 </html>
