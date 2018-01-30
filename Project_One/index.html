@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+	<div id="content_to_pdf" class="container">
+<fieldset>
+<legend>Invoice From:</legend>
+	<div class="row">
+
+	<div class="col-sm-5">
+		<div class="form-group row">
+				<label for="address-input" class="col-3 col-form-label">Address</label>
+						<div class="col-7">
+						<input class="form-control" type="text" value="73 Melrose Avenue" id="address-input">
+						</div>
+				 <label for="town1-input" class="col-3 col-form-label">Town</label>
+						<div class="col-7">
+						<input class="form-control" type="text" value="London" id="town1-input">
+						</div>
+				 <label for="postcode1-input" class="col-3 col-form-label">Postcode</label>
+						<div class="col-7">
+						<input class="form-control" type="text" value="CR4 2EH" id="postcode1-input">
+						</div>
+			</div>
+		</div>
+		<div class="col-sm-5">
+		<div class="form-group row">
+						<label for="phone-input" class="col-3 col-form-label">Tel:</label>
+						<div class="col-7">
+						<input class="form-control" type="text" value="07830531436" id="phone-input">
+						</div>
+						<label for="email-input" class="col-3 col-form-label">Email:</label>
+						<div class="col-7">
+						<input class="form-control" type="text" value="velpr.vd@gmail.com" id="email-input">
+						</div>
+						<label for="utr-input" class="col-3 col-form-label">UTR:</label>
+						<div class="col-7">
+						<input class="form-control" type="text" value="5111012031" id="utr-input">
+						</div>
+						<label for="utr-input" class="col-3 col-form-label">Company N:</label>
+						<div class="col-7">
+						<input class="form-control" type="text" value="1012031" id="utr-input">
+						</div>
+			</div>
+		</div>
+ <div class="col-sm-5">
+		<div class="form-group row">
+						<label for="invoiceN-input" class="col-5 col-form-label">VAT Registration N:</label>
+						<div class="col-7">
+						<input class="form-control" type="text" id="invoiceN-input">
+						</div>
+						<label for="invoiceD-input" class="col-5 col-form-label">Tax Rate:</label>
+						<div class="col-7">
+						<select id="selectRate" class="form-control">
+							<option>Select a rate</option>
+							<option>0&#37;</option>
+							<option>20&#37;</option>
+						</select>
+						</div>
+			</div>
+		</div>
+	</div>
+	</fieldset>
+
+		<fieldset>
+		<legend>Invoice To:</legend>
+		<div class="row">
+		<div class="col-sm-5">
+		<div class="form-group row">
+				<label for="name-input" class="col-3 col-form-label">Name</label>
+						<div class="col-7">
+						<select id="selectName" class="form-control" onchange="showAddress()">
+							<option value="choose">Choose a company name</option>
+							<!--<option value="Fireclad Ltd"></option>
+							<option value="Jarvis Ltd"></option>
+							<option value="MG Drywall"></option>-->
+						</select>
+						</div>
+				<label for="street-input" class="col-3 col-form-label">Street</label>
+						<div class="col-7">
+						<input class="form-control" type="text" id="street-input">
+						</div>
+				 <label for="town-input" class="col-3 col-form-label">Town</label>
+						<div class="col-7">
+						<input class="form-control" type="text" id="town-input">
+						</div>
+				 <label for="postcode-input" class="col-3 col-form-label">Postcode</label>
+						<div class="col-7">
+						<input class="form-control" type="text" id="postcode-input">
+						</div>
+			</div>
+		</div>
+		<div class="col-sm-5">
+		<div class="form-group row">
+						<label for="invoiceN-input" class="col-5 col-form-label">Invoice N:</label>
+						<div class="col-7">
+						<input class="form-control" type="text" id="invoiceN-input">
+						</div>
+						<label for="invoiceD-input" class="col-5 col-form-label">Invoice Date:</label>
+						<div class="col-7">
+						<input class="form-control" type="date" id="invoiceD-input">
+						</div>
+						<label for="weekEnd-input" class="col-5 col-form-label">Week ending date:</label>
+						<div class="col-7">
+						<input class="form-control" type="date" id="weekEnd-input">
+						</div>
+						<label for="job-input" class="col-5 col-form-label">JOB NAME:</label>
+						<div class="col-7">
+						<input class="form-control" type="text" id="job-input">
+						</div>
+			</div>
+		</div>
+	</div>
+</fieldset>
+
+
+
+ <div id="table">
+	<table class="table table-hover">
+	<thead>
+		<tr>
+			<th>DESCRIPTION</th>
+			<th>AMOUNT</th>
+		</tr>
+	</thead>
+
+	<tbody>
+		<tr class="description">
+			<td>Drylining Services</td>
+			<td></td>
+		</tr>
+
+		<tr>
+			<td><label for="laborTotal" class="col-5 col-form-label">Labor Total:</label></td>
+			<td id="laborTotal"> <div class="col-7"><input class="form-control" type="text" id="laborTotal"><button class="btn btn-pinmary" onclick="calculateInvoice(laborTotal.value)">Calculate</button></div>
+
+			</td>
+		</tr>
+
+		<tr>
+			<td>VAT</td>
+			<td id="vat"></td>
+		</tr>
+
+		<tr>
+			<td>Sub Total</td>
+			<td id="subtotal"></td>
+		</tr>
+
+		<tr>
+			<td>Less 20&#37; CIS</td>
+			<td id="less"></td>
+		</tr>
+
+		<tr>
+			<td>Total Due</td>
+			<td id="totalDue"></td>
+		</tr>
+
+	</tbody>
+</table>
+
+ </div>
+
+</div>
+
+
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<script src="script.js"></script>
+</body>
+</html>
