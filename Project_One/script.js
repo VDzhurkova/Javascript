@@ -65,16 +65,27 @@ function showAddress() {
 		}
 
 	function calculateInvoice(input) {
-		var input = document.getElementById("laborTotal")[0].value;
+
 		var total = parseInt(input, 10);
-		console.log(total);
-		var vat = input*(20/100);
-		console.log(vat);
-		var subTotal = input+vat;
-		var less20 = vat;
-		var totaldue = subTotal - less20;
+		var vat = 0;
+		var subTotal, totaldue;
+		var less20 = total * 0.2;;
+		if(document.getElementById("selectRate").value == "1"){
+			subTotal = total;
+		}
+		else{
+		 vat = total * 0.2;
+		 subTotal = total + vat;
+		}
+
+		totaldue = subTotal - less20;
 		document.getElementById("totalDue").innerHTML = totaldue;
-		console.log(totaldue);
+		document.getElementById("vat").innerHTML = vat;
+		document.getElementById("subtotal").innerHTML = subTotal;
+		document.getElementById("laborTotal").innerHTML = total;
+		document.getElementById("less").innerHTML = less20;
+
+		console.log(total);
 
 }
 
