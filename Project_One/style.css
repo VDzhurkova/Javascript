@@ -1,3 +1,8 @@
+.container{
+width: 65%;
+background-color: rgba(25, 200, 182, 0.63);
+}
+
 table tr td{
 	text-align: right;
 }
@@ -12,4 +17,12 @@ table tr td{
 width: 100px;
 }
 
+#table{
+width: 70%;
+margin: 20px 0 0 90px;
+}
+
+.invoice_from, .invoice_to{
+margin: 0 0 0 50px;
+}
 
